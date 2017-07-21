@@ -19,13 +19,13 @@ export class HomePage {
     });
   }
 
-  getUserImage(id: number) {
-    return this.wpProvider.getUserImage(id);
-  }
+  // getUserImage(id: number) {
+  //   return this.wpProvider.getUserImage(id);
+  // }
 
-  getUserName(id: number) {
-    return this.wpProvider.getUserName(id);
-  }
+  // getUserName(id: number) {
+  //   return this.wpProvider.getUserName(id);
+  // }
 
   openPost(post: Post) {
     this.navCtrl.push('PostPage', {post: post});

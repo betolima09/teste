@@ -19,13 +19,13 @@ export class WpProvider {
   constructor(public wpApiPosts: WpApiPosts, public wpApiMedia: WpApiMedia, public wpApiUsers: WpApiUsers) {
     this.wpApiUsers.getList()
       .map(res => res.json())
-      .subscribe(data => {
-        this.users = [];
-        for (let user of data) {
-          let oneUser = new User(user[ 'id' ], user[ 'name' ], user[ 'avatar_urls' ][ '96' ]);
-          this.users.push(oneUser);
-        }
-      })
+      // .subscribe(data => {
+      //   this.users = [];
+      //   for (let user of data) {
+      //     let oneUser = new User(user[ 'id' ], user[ 'name' ], user[ 'avatar_urls' ][ '96' ]);
+      //     this.users.push(oneUser);
+      //   }
+      // })
   }
 
   getPosts(): Observable<Post[]> {
@@ -50,19 +50,19 @@ export class WpProvider {
       });
   }
 
-  getUserImage(userId: number) {
-    for (let usr of this.users) {
-      if (usr.id === userId) {
-        return usr.userImageUrl;
-      }
-    }
-  }
+  // getUserImage(userId: number) {
+  //   for (let usr of this.users) {
+  //     if (usr.id === userId) {
+  //       return usr.userImageUrl;
+  //     }
+  //   }
+  // }
 
-  getUserName(userId: number) {
-    for (let usr of this.users) {
-      if (usr.id === userId) {
-        return usr.name;
-      }
-    }
-  }
+  // getUserName(userId: number) {
+  //   for (let usr of this.users) {
+  //     if (usr.id === userId) {
+  //       return usr.name;
+  //     }
+  //   }
+  // }
 }

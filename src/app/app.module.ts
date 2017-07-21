@@ -17,7 +17,8 @@ import {
 } from 'wp-api-angular'
 
 export function WpApiLoaderFactory(http) {
-  return new WpApiStaticLoader(http, 'https://devdactic.com//wp-json/');
+  return new WpApiStaticLoader(http, 'http://weblocation.com.br/wp-json/');
+  // return new WpApiStaticLoader(http, 'https://devdactic.com//wp-json/');
 }
 
 @NgModule({
